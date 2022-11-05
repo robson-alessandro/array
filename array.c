@@ -12,7 +12,7 @@ int main(){
     adicionar(lista , tamanho);
 
     for(int j=0 ; j<tamanho; j++){
-            printf("%d",lista[j]);
+            printf("%d ",lista[j]);
     }
     
   return 0;
