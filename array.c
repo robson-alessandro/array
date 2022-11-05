@@ -1,5 +1,6 @@
 #include <stdio.h>
 
+void adicionar(int *lista , int tamanho);
 int main(){
     int tamanho;
     printf("############criar uma lista de numeros sem repetir#########\n");
@@ -7,9 +8,19 @@ int main(){
     scanf("%d", &tamanho);
 
     int lista[tamanho];
+
+    adicionar(lista , tamanho);
+
+    for(int j=0 ; j<tamanho; j++){
+            printf("%d",lista[j]);
+    }
+    
+  return 0;
+}
+
+void adicionar(int *lista , int tamanho){
     int numero;
     int posicao = 0;
-
     do{
         printf("digite o numero:");
         scanf("%d" , &numero);
@@ -29,13 +40,4 @@ int main(){
         }
 
         }while(tamanho>posicao);
-    
-
-    for(int j=0 ; j<tamanho; j++){
-            printf("%d",lista[j]);
-    }
-  return 0;
 }
-
-
-
